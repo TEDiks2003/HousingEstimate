@@ -148,7 +148,7 @@ def getestimate(pricedistancelist):
 
 
 # get test data
-testData = pd.read_csv(r"D:\Coding Files\HousePriceDataTEST.csv")
+testData = pd.read_csv(r"HousePriceDataTEST.csv")
 
 # assigns days to 2019 to all houses in test data
 testData["Days to 2019"] = [nodaysto2019(x) for x in testData["Date"]]
@@ -179,4 +179,4 @@ for i, row in testData.iterrows():
 
 testData["Estimated Price"] = estimatePriceList
 
-testData.to_csv(r'D:\Coding Files\HousingDataWithEstimates.csv', index=False, header=True)
+testData.to_csv(r'HousingDataWithEstimates.csv', index=False, header=True)
